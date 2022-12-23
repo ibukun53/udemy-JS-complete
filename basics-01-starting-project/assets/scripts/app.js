@@ -4,7 +4,7 @@ const defaultReault = 0;
 let currentResult = defaultReault;
 
 function add() {
-  currentResult += userInput.value;
+  currentResult += parseInt(userInput.value, 10);
   // eslint-disable-next-line no-undef
   outputResult(currentResult, '');
 }

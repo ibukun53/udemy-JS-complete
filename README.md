@@ -19,7 +19,7 @@
 - Clone the project
 
 ```bash
-git clone https://github.com/ibukun53/Library-project.git
+git clone https://github.com/ibukun53/udemy-JS-complete.git
 
 ```
 

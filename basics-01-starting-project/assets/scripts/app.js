@@ -2,8 +2,9 @@
 const defaultReault = 0;
 let currentResult = defaultReault;
 function add() {
-  const calDescription = `${currentResult} + ${userInput.value}`;
-  currentResult = currentResult + +userInput.value;
+  const enteredNumber = +userInput.value;
+  const calDescription = `${currentResult} + ${enteredNumber}`;
+  currentResult = currentResult + +enteredNumber;
   outputResult(currentResult, calDescription);
 }
 addBtn.addEventListener('click', add);

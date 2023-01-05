@@ -1,29 +1,57 @@
 {
   "name": "udemy-js-complete",
   "version": "1.0.0",
-  "private": true,
+  "scripts": {
+    "test": "jest --passWithNoTests",
+    "format": "npx prettier  --write '**/*.{json,md,yaml,html,yml}'",
+    "format:check": "npx prettier  --check '**/*.{json,md,html,yaml,yml}'",
+    "webhint": "npx hint --telemetry=off .",
+    "eslint": "npx eslint . --fix",
+    "eslint:check": "npx eslint .",
+    "stylelint": "npx stylelint \"**/*.{css,scss}\" --fix",
+    "stylelint:check": "npx stylelint  \"**/*.{css,scss}\"",
+    "lint": "npx eslint '**/*.js' --fix; npx stylelint \"**/*.{css,scss}\" --fix",
+    "lint:check": "npx eslint '**/*.js'; npx stylelint  \"**/*.{css,scss}\""
+  },
+  "description": "A list of coding challenges with solution and test cases.",
   "dependencies": {},
   "devDependencies": {
-    "babel-eslint": "^10.1.0",
-    "eslint": "^7.32.0",
-    "eslint-config-airbnb-base": "^4.0.2",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-react": "^7.31.11",
-    "prettier": "^1.19.1",
-    "stylelint": "^13.x",
-    "stylelint-config-recommended": "^3.x",
-    "stylelint-config-standard": "^20.x",
-    "stylelint-csstree-validator": "^1.x",
-    "stylelint-scss": "^3.x"
+    "@babel/preset-env": "^7",
+    "eslint": "^8",
+    "eslint-config-airbnb": "^19",
+    "eslint-config-airbnb-base": "^15",
+    "eslint-config-prettier": "^8",
+    "eslint-plugin-import": "^2",
+    "eslint-plugin-prettier": "^4",
+    "hint": "^7",
+    "jest": "^29",
+    "jest-extended": "^3",
+    "prettier": "^2",
+    "stylelint": "^14",
+    "stylelint-config-standard": "^25"
   },
-  "scripts": {
-    "format": "npx prettier --write \"**/*.{html,json,md,yaml,yml}\"",
-    "format:check": "npx prettier  --check \"**/*.{html,json,md,yaml,yml}\"",
-    "lint": "npx stylelint \"**/*.css\" --fix && npx eslint . --fix",
-    "lint:check": "npx stylelint \"**/*.css\" && npx eslint .",
-    "stylelint": "npx stylelint \"**/*.css\" --fix",
-    "stylelint:check": " ",
-    "eslint": "npx eslint . --fix",
-    "eslint:check": "npx eslint ."
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bolah2009/udemy-js-complete-guide.git"
+  },
+  "keywords": [
+    "JavaScript",
+    "Jest",
+    "Algorithm"
+  ],
+  "author": "Bola",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bolah2009/udemy-js-complete-guide/issues"
+  },
+  "homepage": "https://github.com/bolah2009/udemy-js-complete-guide#readme",
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "identity-obj-proxy"
+    },
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true,
+    "verbose": true
   }
 }

@@ -1,6 +1,7 @@
 /* eslint-disable no-undef */
 const defaultReault = 0;
 let currentResult = defaultReault;
+const logEntries = [];
 
 // Get userInput from Input Field
 const enterUserNumberInput = () => +userInput.value;
@@ -16,6 +17,8 @@ const add = () => {
   const intialNumber = currentResult;
   currentResult += enteredNumber;
   createAndWriteOutput('+', intialNumber, enteredNumber);
+  logEntries.push(enteredNumber);
+  console.log(logEntries);
 };
 
 const subtract = () => {

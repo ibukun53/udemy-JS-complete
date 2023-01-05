@@ -2,10 +2,41 @@
 const defaultReault = 0;
 let currentResult = defaultReault;
 const enterUserNumberInput = () => +userInput.value;
+
+const createAndWriteOutput = (operator, resultBeforeCalc, calcNumber) => {
+  const calDescription = ` ${resultBeforeCalc} ${operator} ${calcNumber}`;
+  outputResult(currentResult, calDescription);
+}
+
 const add = () => {
   const enteredNumber = enterUserNumberInput();
-  const calDescription = `${currentResult} + ${enteredNumber}`;
-  currentResult = currentResult + +enteredNumber;
-  outputResult(currentResult, calDescription);
+  const intialNumber = currentResult;
+  currentResult = currentResult + enteredNumber;
+  createAndWriteOutput('+', intialNumber, enteredNumber);
 };
+
+const subtract = () => {
+  const enteredNumber = enterUserNumberInput();
+  const intialNumber = currentResult;
+  currentResult = currentResult - enteredNumber;
+  createAndWriteOutput('-', intialNumber, enteredNumber);
+};
+
+const multiply = () => {
+  const enteredNumber = enterUserNumberInput();
+  const intialNumber = currentResult;
+  currentResult = currentResult * enteredNumber;
+  createAndWriteOutput('*', intialNumber, enteredNumber);
+};
+
+const division = () => {
+  const enteredNumber = enterUserNumberInput();
+  const intialNumber = currentResult;
+  currentResult = currentResult / enteredNumber;
+  createAndWriteOutput('/', intialNumber, enteredNumber);
+};
+
 addBtn.addEventListener('click', add);
+subtractBtn.addEventListener('click', subtract);
+multiplyBtn.addEventListener('click', multiply);
+divideBtn.addEventListener('click', division);

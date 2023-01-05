@@ -11,7 +11,7 @@ const createAndWriteOutput = (operator, resultBeforeCalc, calcNumber) => {
   const calDescription = ` ${resultBeforeCalc} ${operator} ${calcNumber}`;
   outputResult(currentResult, calDescription); // from vendor file
 };
-const writeToLog = (operatorIdentifier, prevResult, operationNumber, newResult) =>{
+const writeToLog = (operatorIdentifier, prevResult, operationNumber, newResult) => {
   const logEntry = {
     operation: operatorIdentifier,
     preResult: prevResult,
@@ -20,7 +20,7 @@ const writeToLog = (operatorIdentifier, prevResult, operationNumber, newResult) 
   };
   logEntries.push(logEntry);
   console.log(logEntries);
-}
+};
 
 const add = () => {
   const enteredNumber = enterUserNumberInput();

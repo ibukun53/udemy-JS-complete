@@ -17,7 +17,13 @@ const add = () => {
   const intialNumber = currentResult;
   currentResult += enteredNumber;
   createAndWriteOutput('+', intialNumber, enteredNumber);
-  logEntries.push(enteredNumber);
+  const logEntry = {
+    operation: 'ADD',
+    prevResult: intialNumber,
+    number: enteredNumber,
+    result: currentResult,
+  };
+  logEntries.push(logEntry);
   console.log(logEntries);
 };
 

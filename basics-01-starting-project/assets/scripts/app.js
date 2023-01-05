@@ -1,38 +1,41 @@
 /* eslint-disable no-undef */
 const defaultReault = 0;
 let currentResult = defaultReault;
+
+// Get userInput from Input Field
 const enterUserNumberInput = () => +userInput.value;
 
+// Generate and write calculation log
 const createAndWriteOutput = (operator, resultBeforeCalc, calcNumber) => {
   const calDescription = ` ${resultBeforeCalc} ${operator} ${calcNumber}`;
-  outputResult(currentResult, calDescription);
-}
+  outputResult(currentResult, calDescription); // from vendor file
+};
 
 const add = () => {
   const enteredNumber = enterUserNumberInput();
   const intialNumber = currentResult;
-  currentResult = currentResult + enteredNumber;
+  currentResult += enteredNumber;
   createAndWriteOutput('+', intialNumber, enteredNumber);
 };
 
 const subtract = () => {
   const enteredNumber = enterUserNumberInput();
   const intialNumber = currentResult;
-  currentResult = currentResult - enteredNumber;
+  currentResult -= enteredNumber;
   createAndWriteOutput('-', intialNumber, enteredNumber);
 };
 
 const multiply = () => {
   const enteredNumber = enterUserNumberInput();
   const intialNumber = currentResult;
-  currentResult = currentResult * enteredNumber;
+  currentResult *= enteredNumber;
   createAndWriteOutput('*', intialNumber, enteredNumber);
 };
 
 const division = () => {
   const enteredNumber = enterUserNumberInput();
   const intialNumber = currentResult;
-  currentResult = currentResult / enteredNumber;
+  currentResult /= enteredNumber;
   createAndWriteOutput('/', intialNumber, enteredNumber);
 };
 

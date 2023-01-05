@@ -1,11 +1,8 @@
-const userInput = document.getElementById('input-number');
-const addBtn = document.getElementById('btn-add');
+/* eslint-disable no-undef */
 const defaultReault = 0;
 let currentResult = defaultReault;
-
 function add() {
-  currentResult += parseInt(userInput.value, 10);
-  // eslint-disable-next-line no-undef
+  currentResult = currentResult + +userInput.value;
   outputResult(currentResult, '');
 }
 addBtn.addEventListener('click', add);

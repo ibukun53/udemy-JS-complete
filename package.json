@@ -1,28 +1,37 @@
 {
-  "name": "udemy-js-complete",
+  "name": "udemy-JS-complete",
   "version": "1.0.0",
-  "private": true,
-  "dependencies": {},
-  "devDependencies": {
-    "babel-eslint": "^10.1.0",
-    "eslint": "^7.32.0",
-    "eslint-config-airbnb-base": "^4.0.2",
-    "eslint-plugin-import": "^2.26.0",
-    "prettier": "^1.19.1",
-    "stylelint": "^13.x",
-    "stylelint-config-recommended": "^3.x",
-    "stylelint-config-standard": "^20.x",
-    "stylelint-csstree-validator": "^1.x",
-    "stylelint-scss": "^3.x"
-  },
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "format": "npx prettier --write \"**/*.{html,json,md,yaml,yml}\"",
-    "format:check": "npx prettier  --check \"**/*.{html,json,md,yaml,yml}\"",
-    "lint": "npx stylelint \"**/*.css\" --fix && npx eslint . --fix",
-    "lint:check": "npx stylelint \"**/*.css\" && npx eslint .",
-    "stylelint": "npx stylelint \"**/*.css\" --fix",
-    "stylelint:check": " ",
-    "eslint": "npx eslint . --fix",
-    "eslint:check": "npx eslint ."
-  }
+    "format": "npx prettier  --write **/*.{html,js,json,md,json,yaml,yml,jsx}",
+    "format:check": "npx prettier  --check **/*.{html,js,json,md,json,yaml,yml}",
+    "lint": "npx stylelint \"**/*.css\" --fix",
+    "lint:check": "npx stylelint \"**/*.css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "githttps://github.com/ibukun53/udemy-JS-complete.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ibukun53/udemy-JS-complete/issues"
+  },
+  "homepage": "https://github.com/ibukun53/udemy-JS-complete#readme",
+  "devDependencies": {
+    "css-aspect-ratio": "^1.0.5",
+    "hint": "^6.1.4",
+    "prettier": "^2.4.1",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^21.0.0",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "^3.21.0"
+  },
+  "dependencies": {},
+  "browserslist": [
+    "defaults",
+    "not IE 11",
+    "maintained node versions"
+  ]
 }

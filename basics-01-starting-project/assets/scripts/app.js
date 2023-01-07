@@ -22,41 +22,41 @@ const writeToLog = (operatorIdentifier, prevResult, operationNumber, newResult) 
   console.log(logEntries);
 };
 
-const calculationResult =(calculateType) =>{
+const calculationResult = (calculateType) => {
   const enteredNumber = enterUserNumberInput();
   const intialNumber = currentResult;
   let mathOperator;
-  if(calculateType === 'ADD'){
+  if (calculateType === 'ADD') {
     currentResult += enteredNumber;
     mathOperator = '+';
-  }else if (calculateType === 'SUBTRACT'){
+  } else if (calculateType === 'SUBTRACT') {
     currentResult -= enteredNumber;
     mathOperator = '-';
-  } else if (calculateType === 'MULTIPLY'){
+  } else if (calculateType === 'MULTIPLY') {
     currentResult *= enteredNumber;
     mathOperator = '*';
-  }else if (calculateType === 'DIVIDE'){
+  } else if (calculateType === 'DIVIDE') {
     currentResult /= enteredNumber;
     mathOperator = '/';
   }
-  createAndWriteOutput( mathOperator, intialNumber, enteredNumber);
+  createAndWriteOutput(mathOperator, intialNumber, enteredNumber);
   writeToLog(calculateType, intialNumber, enteredNumber, currentResult);
-}
+};
 
 const add = () => {
-  calculationResult('ADD'); 
+  calculationResult('ADD');
 };
 
 const subtract = () => {
-  calculationResult('SUBTRACT'); 
+  calculationResult('SUBTRACT');
 };
 
 const multiply = () => {
-  calculationResult('MULTIPLY');  
+  calculationResult('MULTIPLY');
 };
 
 const division = () => {
-  calculationResult('DIVIDE'); 
+  calculationResult('DIVIDE');
 };
 
 addBtn.addEventListener('click', add);

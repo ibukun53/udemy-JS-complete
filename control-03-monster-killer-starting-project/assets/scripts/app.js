@@ -8,32 +8,33 @@ let curentPlayerHealth = chosenMaxValue;
 
 adjustHealthBars(chosenMaxValue);
 
-const attackHandler = () =>{
-const damage = dealMonsterDamage(attackValue);
-currentMonsterHealth -= damage;
-const PlayerDamage = dealPlayerDamage( monsterAttackValue);
-curentPlayerHealth -= PlayerDamage;
-if(currentMonsterHealth <= 0 && curentPlayerHealth > 0){
-alert('you win');
-} else if (curentPlayerHealth <= 0 && currentMonsterHealth > 0){
+const attackMonster =(mode) =>{
+ let maxDamage;
+ if(mode === 'ATTACK'){
+    maxDamage = attackValue;
+ } else if(mode === 'STRONG-ATTACK'){
+  maxDamage = strongAttackValue;
+ }
+
+ const damage = dealMonsterDamage( maxDamage);
+  currentMonsterHealth -= damage;
+  const PlayerDamage = dealPlayerDamage(monsterAttackValue);
+  curentPlayerHealth -= PlayerDamage;
+  if (currentMonsterHealth <= 0 && curentPlayerHealth > 0) {
+    alert('you win');
+  } else if (curentPlayerHealth <= 0 && currentMonsterHealth > 0) {
     alert('you lost');
-}else if (curentPlayerHealth <= 0 && currentMonsterHealth <= 0){
+  } else if (curentPlayerHealth <= 0 && currentMonsterHealth <= 0) {
     alert('you have a draw');
-}
+  }
 }
 
-const strongAttackHandler =() =>{
-    const damage = dealMonsterDamage(strongAttackValue);
-    currentMonsterHealth -= damage;
-    const PlayerDamage = dealPlayerDamage( monsterAttackValue);
-    curentPlayerHealth -= PlayerDamage;
-    if(currentMonsterHealth <= 0 && curentPlayerHealth > 0){
-    alert('you win');
-    } else if (curentPlayerHealth <= 0 && currentMonsterHealth > 0){
-        alert('you lost');
-    }else if (curentPlayerHealth <= 0 && currentMonsterHealth <= 0){
-        alert('you have a draw');
-    } 
-}
+const attackHandler = () => {
+    attackMonster('ATTACK');
+};
+
+const strongAttackHandler = () => {
+    attackMonster('STRONG-ATTACK');
+};
 attackBtn.addEventListener('click', attackHandler);
-strongAttackBtn.addEventListener('click', strongAttackHandler)
+strongAttackBtn.addEventListener('click', strongAttackHandler);

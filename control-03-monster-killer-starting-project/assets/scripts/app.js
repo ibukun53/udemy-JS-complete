@@ -102,15 +102,15 @@ const endRound = () => {
   }
 };
 const attackMonster = (mode) => {
-  let maxDamage;
-  let logEvent;
-  if (mode === mode_Attack) {
-    maxDamage  = attack_Value;
-    logEvent = log_Event_Player_Attack;
-  } else if (mode === mode_Strong_Attack) {
-    maxDamage = strong_Attack_Value;
-    logEvent = log_Event_Player_Strong_Attack;
-  }
+  let maxDamage = mode === mode_Attack ? attack_Value : strong_Attack_Value;
+  let logEvent = mode === mode_Attack ? log_Event_Player_Attack : log_Event_Player_Strong_Attack;
+  // if (mode === mode_Attack) {
+    // maxDamage  = attack_Value;
+   //  logEvent = log_Event_Player_Attack;
+   // } else if (mode === mode_Strong_Attack) {
+    // maxDamage = strong_Attack_Value;
+    // logEvent = log_Event_Player_Strong_Attack;
+   //}
   const damage = dealMonsterDamage(maxDamage);
   currentMonsterHealth -= damage;
   writeToLog(logEvent, damage, currentMonsterHealth,curentPlayerHealth )

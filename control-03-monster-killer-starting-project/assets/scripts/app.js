@@ -140,6 +140,18 @@ const healPlayerHandler = () => {
 };
 
 const printLogHandler= () => {
+  // while loop
+  //  let j= 0;
+  // while(j < 3){
+  //  console.log(j);
+   // j++;
+  // }
+  // while do 
+  let j = 3
+  do {
+  console.log(j);
+  j++
+  } while  (j < 3);
   // for loop
   // for(let i = 0; i < battleLog.length; i++){
  // console.log(battleLog[i]);

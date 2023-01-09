@@ -144,10 +144,14 @@ const printLogHandler= () => {
   // for(let i = 0; i < battleLog.length; i++){
  // console.log(battleLog[i]);
 // }
+// for-in-loop
 let i = 0;
 for(const logEntries of battleLog){
-console.log(logEntries)
-  console.log(i)
+  console.log(`#${i}`);
+  for( const key in logEntries){
+    console.log(`${key} => ${logEntries[key]}`);
+    
+  }
   i++;
 }
 }

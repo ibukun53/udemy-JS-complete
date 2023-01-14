@@ -1,3 +1,4 @@
+/* eslint-disable no-alert */
 /* eslint-disable no-undef */
 const attackValue = 10;
 const strongAttackValue = 17;
@@ -150,7 +151,7 @@ const printLogHandler = () => {
   // console.log(`#${i}`);
   // for (const key in logEntries) {
   //  console.log(`${key} => ${logEntries[key]}`);
-// }
+  // }
   //   i++;
   // }
 };

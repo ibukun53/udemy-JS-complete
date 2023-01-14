@@ -19,6 +19,7 @@ const writeToLog = (operatorIdentifier, prevResult, operationNumber, newResult) 
     result: newResult,
   };
   logEntries.push(logEntry);
+  // eslint-disable-next-line no-console
   console.log(logEntries);
 };
 

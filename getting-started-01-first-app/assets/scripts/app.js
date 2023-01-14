@@ -12,7 +12,7 @@ function hideInfoModal() {
 }
 
 function presentInfoModal(event) {
-  const text = event.target.dataset.text;
+  const { text } = event.target.dataset;
   toggleBackdrop();
   infoModal = document.createElement('div');
   infoModal.classList.add('modal');
@@ -27,6 +27,7 @@ function presentInfoModal(event) {
   document.body.appendChild(infoModal);
 }
 
+// eslint-disable-next-line no-restricted-syntax
 for (const linkElement of modalLinkElements) {
   linkElement.addEventListener('click', presentInfoModal);
 }

@@ -3,7 +3,7 @@
 }
 
 html {
-  font-family: 'Roboto', open-sans;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -59,6 +59,10 @@ header {
   cursor: pointer;
 }
 
+#calc-actions button {
+  width: 4rem;
+}
+
 #calculator button:focus {
   outline: none;
 }
@@ -67,10 +71,6 @@ header {
 #calculator button:active {
   background: #084f88;
   border-color: #084f88;
-}
-
-#calc-actions button {
-  width: 4rem;
 }
 
 #calc-actions {

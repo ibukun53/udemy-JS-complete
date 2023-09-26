@@ -1,19 +1,14 @@
-// let name = 'Max';
+const name = 'Max';
 
-// if (name === 'Max') {
-// let hobbies = ['Sports', 'Cooking'];
-// console.log(hobbies);
-// }
+if (name === 'Max') {
+  const hobbies = ['Sports', 'Cooking'];
+  console.log(hobbies);
+}
 
-// function greet() {
-//  let age = 30;
-//  let name = 'Manuel';
-//  console.log(name, age, hobbies);
-// }
+function greet() {
+  const age = 30;
+  const name = 'Manuel';
+  console.log(name, age);
+}
 
-// console.log(name, hobbies);
-
-// greet();
-const userName = 'Max';
-
-console.log(userName);
+greet();

@@ -12,7 +12,7 @@ function hideInfoModal() {
 }
 
 function presentInfoModal(event) {
-  const { text } = event.target.dataset;
+  const text = event.target.dataset;
   toggleBackdrop();
   infoModal = document.createElement('div');
   infoModal.classList.add('modal');

@@ -3,14 +3,14 @@
 }
 
 body {
-  font-family: 'Roboto', open-sans;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
 }
 
 h1,
 h2 {
   margin: 0 0 1rem 0;
-  font-family: 'Roboto Condensed', 'Roboto', open-sans;
+  font-family: 'Roboto Condensed', 'Roboto', sans-serif;
 }
 
 h2 {
@@ -18,7 +18,7 @@ h2 {
 }
 
 a {
-  color: #ff0055;
+  color: #f055;
   text-decoration: none;
 }
 
@@ -29,7 +29,7 @@ a:hover {
 
 button {
   padding: 1rem;
-  color: #ff0055;
+  color: #f055;
   font: inherit;
   border: none;
   cursor: pointer;
@@ -110,7 +110,7 @@ section {
 
 #main-header {
   padding: 2rem 2rem;
-  background: #ff0055;
+  background: #f055;
   color: white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
 }
@@ -124,7 +124,7 @@ section {
 #instructor-info {
   display: flex;
   align-items: center;
-  border-bottom: 2px solid #ff0055;
+  border-bottom: 2px solid #f055;
   padding-bottom: 1rem;
 }
 
@@ -162,6 +162,7 @@ section {
   from {
     transform: translateY(-3rem);
   }
+
   to {
     transform: translateY(0);
   }

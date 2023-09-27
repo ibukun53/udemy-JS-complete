@@ -2,7 +2,7 @@ const name = 'Max';
 
 if (name === 'Max') {
   const hobbies = ['Sports', 'Cooking'];
-  console.log(hobbies);
+  console.log(hobbiess);
 }
 
 function greet() {
